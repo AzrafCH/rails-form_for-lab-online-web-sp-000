@@ -5,7 +5,6 @@ class SchoolClassesController < ApplicationController
   end
 
   def new
-
   end
 
   def show
@@ -22,6 +21,11 @@ class SchoolClassesController < ApplicationController
 
   def update
 
+  end
+
+  private
+  def class_params
+    params.require(:school_class).permit(:room_number, :title)
   end
 
 end
