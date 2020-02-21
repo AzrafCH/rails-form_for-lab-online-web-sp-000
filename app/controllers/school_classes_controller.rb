@@ -18,11 +18,12 @@ class SchoolClassesController < ApplicationController
   end
 
   def edit
-
   end
 
   def update
-
+    @school_class = SchoolClass.find(params[:id])
+    @school_class.update(class_params)
+    redirect_to schoolclass_path(@school_class)
   end
 
   private
